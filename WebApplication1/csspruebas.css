@@ -1,0 +1,101 @@
+﻿#columnas {
+    column-count:4;
+    column-gap:10px;
+    column-rule:2px dotted blue;
+    -webkit-column-count:4;
+    -webkit-column-gap:10px;
+    -webkit-column-rule:2px dotted blue;
+    -moz-column-count:4;
+    -moz-column-gap:10px;
+    -moz-column-rule:2px dotted blue;
+
+
+}
+
+.bordeado{
+    border:3px solid blue;
+    border-radius:2px 5px;
+}
+.sombreado{
+    box-shadow:0px 20px green;
+}
+.degradado{
+ background: #fefcea; /* Old browsers */
+background: -moz-linear-gradient(left,  #fefcea 24%, #fefcea 24%, #f1da36 98%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(24%,#fefcea), color-stop(24%,#fefcea), color-stop(98%,#f1da36)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  #fefcea 24%,#fefcea 24%,#f1da36 98%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  #fefcea 24%,#fefcea 24%,#f1da36 98%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  #fefcea 24%,#fefcea 24%,#f1da36 98%); /* IE10+ */
+background: linear-gradient(to right,  #fefcea 24%,#fefcea 24%,#f1da36 98%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=1 ); /* IE6-9 */
+
+
+}
+#muevete{
+    position:absolute;
+    left:10px;
+    top:500px;
+    width:100px;
+    height:100px;
+    background-color:red;
+    z-index:1000;
+    -webkit-animation:mover 10s;
+    -webkit-animation-iteration-count:infinite;
+    
+}
+@keyframes mover{
+   0%{left:10px;}
+   25%{left:500px;}
+   50%{left:250px;}
+   75%{left:750px;}
+   100%{left:10px;}
+}
+@-webkit-keyframes mover {
+    0% {
+        left: 10px;
+        background-color:red;
+    }
+
+    25% {
+        left: 500px;
+        background-color:black;
+    }
+
+    50% {
+        left: 250px;
+        background-color:lightgrey;
+    }
+    75%{left:750px;}
+
+    100% {
+        left: 10px;
+        background-color:red;
+    }
+}
+#imagen {
+    
+    height:200px;
+    transition:transform 5s;
+
+}
+#imagen:hover {
+    transform:rotate(30deg) scale(1.5) skew(30deg,20deg);
+    
+    
+}
+
+@media screen and (max-width:1024px){
+    #columnas {
+        column-count: 2;
+        column-gap: 5px;
+        column-rule: 1px dotted blue;
+        -webkit-column-count: 2;
+        -webkit-column-gap: 5px;
+        -webkit-column-rule: 1px dotted blue;
+        -moz-column-count: 2;
+        -moz-column-gap: 5px;
+        -moz-column-rule: 1px dotted blue;
+    }
+
+
+}
